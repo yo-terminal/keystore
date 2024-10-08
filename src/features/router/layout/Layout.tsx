@@ -13,6 +13,7 @@ import {
 } from "../../../common/components/sidebar";
 import { SidebarLayout } from "../../../common/components/sidebar-layout";
 import {
+  HomeIcon,
   AtSymbolIcon,
   ArrowTurnLeftUpIcon,
   Cog6ToothIcon,
@@ -20,6 +21,15 @@ import {
 } from "@heroicons/react/20/solid";
 import Logo from "./Logo";
 import { useAppSelector, useBook } from "../../../app/hooks";
+import {
+  Dropdown,
+  DropdownButton,
+  DropdownDivider,
+  DropdownItem,
+  DropdownLabel,
+  DropdownMenu,
+} from "../../../common/components/dropdown";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 export function Layout() {
   const navigate = useNavigate();
@@ -38,10 +48,31 @@ export function Layout() {
       sidebar={
         <Sidebar>
           <SidebarHeader>
-            <SidebarItem href="/">
+            {/* <SidebarItem href="/">
               <Logo />
               <SidebarLabel>Keystore</SidebarLabel>
-            </SidebarItem>
+            </SidebarItem> */}
+            <Dropdown>
+              <DropdownButton as={SidebarItem}>
+                <Logo />
+                <SidebarLabel>Keystore</SidebarLabel>
+                <ChevronDownIcon />
+              </DropdownButton>
+              <DropdownMenu
+                className="min-w-80 lg:min-w-64"
+                anchor="bottom start"
+              >
+                <DropdownItem href="https://terminal.mobi">
+                  <HomeIcon />
+                  <DropdownLabel>Home</DropdownLabel>
+                </DropdownItem>
+                <DropdownDivider />
+                <DropdownItem href="/">
+                  <Logo />
+                  <DropdownLabel className="pl-3">Keystore</DropdownLabel>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
           </SidebarHeader>
 
           <SidebarBody>
