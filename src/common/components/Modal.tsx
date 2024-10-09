@@ -58,13 +58,13 @@ export function Modal({
               className={clsx(
                 className,
                 sizes[size],
-                "w-full rounded-xl bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
+                "w-full rounded-xl bg-white dark:bg-white/5 p-6 backdrop-blur-2xl duration-300 ease-out data-[closed]:transform-[scale(95%)] data-[closed]:opacity-0"
               )}
             >
               <div className="flex items-start">
                 <DialogTitle
                   as="h3"
-                  className="text-lg font-medium leading-6 text-white"
+                  className="text-lg font-medium leading-6 text-slate-950 dark:text-white"
                 >
                   {title}
                 </DialogTitle>

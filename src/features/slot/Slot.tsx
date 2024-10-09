@@ -179,13 +179,13 @@ export function Slot() {
       {slot?.content && (
         <div className="mt-4 lg:mt-8">
           {/* <Subheading>Content:</Subheading> */}
-          <pre className="py-4 px-5 bg-slate-950 rounded-lg text-yellow-400">
+          <pre className="py-4 px-5 bg-slate-100 dark:bg-slate-950 rounded-lg text-yellow-700 dark:text-yellow-400">
             {slot?.content}
           </pre>
         </div>
       )}
       {!slot?.content && children.length === 0 && (
-        <div className="py-16 text-sm font-semibold text-slate-400 text-center">No content</div>
+        <div className="py-16 text-sm font-semibold text-slate-500 dark:text-slate-400 text-center">No content</div>
       )}
       {children.length > 0 && (
         <div className="mt-12">

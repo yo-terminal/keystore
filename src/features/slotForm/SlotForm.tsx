@@ -49,10 +49,12 @@ export function SlotForm({
     const values: UpdateSlotValues = {
       summary: data.summary,
       content: data.content,
-      parents: data.parents?.map((x) => x.slotId)
+      parents: data.parents?.map((x) => x.slotId),
     };
     onAction(values);
   };
+
+  const restSlots = slot?.id ? slots.filter((x) => x.id !== slot.id) : slots;
 
   return (
     <form
@@ -69,11 +71,10 @@ export function SlotForm({
           />
           <TextareaField label="Content" control={control} name="content" />
           <ParentsField
-            className={slots.length === 0 ? "hidden" : ""}
+            className={restSlots.length === 0 ? "hidden" : ""}
             control={control}
             name="parents"
-            slots={slots}
-            currentSlotId={slot?.id}
+            slots={restSlots}
           />
         </FieldGroup>
       </Fieldset>

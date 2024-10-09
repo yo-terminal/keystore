@@ -15,18 +15,18 @@ export function SlotList({ className, slots }: Props) {
     <ul
       role="list"
       className={classNames(
-        "divide-y divide-white/5 border-b border-white/5",
+        "text-slate-950 dark:text-white divide-y divide-slate-950/5 dark:divide-white/5 border-b border-slate-950/5 dark:border-white/5",
         className
       )}
     >
       {slots.map((slot) => (
         <li
           key={slot.id}
-          className="relative flex items-center space-x-4 px-4 py-4 sm:px-6 hover:bg-slate-800"
+          className="relative flex items-center space-x-4 px-4 py-4 sm:px-6 hover:bg-slate-950/5 dark:hover:bg-white/5"
         >
           <div className="min-w-0 flex-auto">
             <div className="flex items-center gap-x-3">
-              <h2 className="min-w-0 text-sm font-semibold leading-6 text-white">
+              <h2 className="min-w-0 text-sm font-semibold leading-6">
                 <Link to={`/slot/${slot.id}`} className="flex gap-x-2">
                   <span className="truncate">{slot.summary}</span>
                   <span className="absolute inset-0" />
