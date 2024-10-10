@@ -62,14 +62,14 @@ export function Layout() {
                 className="min-w-80 lg:min-w-64"
                 anchor="bottom start"
               >
+                 <DropdownItem href="/">
+                  <Logo />
+                  <DropdownLabel className="pl-3">Keystore</DropdownLabel>
+                </DropdownItem>
+                <DropdownDivider />
                 <DropdownItem href="https://terminal.mobi">
                   <HomeIcon />
                   <DropdownLabel>Home</DropdownLabel>
-                </DropdownItem>
-                <DropdownDivider />
-                <DropdownItem href="/">
-                  <Logo />
-                  <DropdownLabel className="pl-3">Keystore</DropdownLabel>
                 </DropdownItem>
               </DropdownMenu>
             </Dropdown>
