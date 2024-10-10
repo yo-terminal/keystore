@@ -26,7 +26,7 @@ export function Decrypt() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-3xl">
-      <Heading><span className="font-light tracking-wide text-yellow-600 dark:text-yellow-400">Keystore</span> is locked</Heading>
+      <Heading><span className="font-light tracking-wide text-yellow-600 dark:text-yellow-500">Keystore</span> is locked</Heading>
       <Divider className="my-10 mt-6" soft />
 
       <section className="mt-10 grid gap-x-2 gap-y-6 sm:grid-cols-2">

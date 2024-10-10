@@ -58,7 +58,7 @@ export function ParentsField({
         />
       </div>
       <div className="mt-1 grid grid-cols-2 grid-rows-1 border border-slate-950/5 dark:border-white/5 rounded-lg overflow-hidden">
-        <div className="text-sm overflow-y-auto max-h-40 min-h-40 border-r border-slate-950/5 dark:border-white/50">
+        <div className="text-sm overflow-y-auto max-h-40 min-h-40 border-r border-slate-950/5 dark:border-white/5">
           <ul role="list" className="divide-y divide-slate-950/5 dark:divide-white/5">
             {searchedNotes.map((x) => (
               <li

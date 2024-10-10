@@ -9,6 +9,7 @@ import * as safekeeper from "../../app/safekeeper";
 import { Heading, Subheading } from "../../common/components/heading";
 import { Divider } from "../../common/components/divider";
 import { Text } from "../../common/components/text";
+import Warning from "./Warning";
 
 type FormInput = {
   password: string;
@@ -87,6 +88,15 @@ export function InitSafety() {
             rules={{ required: true }}
           />
         </div>
+      </section>
+
+      <section className="mt-16 flex flex-col gap-6">
+        <Warning
+          messages={[
+            "To ensure the security of your sensitive information, you must create a strong password with at least 8 characters, including special characters. Weak passwords are vulnerable to brute force attacks, making it easier for attackers to gain access to your data. Please choose a complex and unique password to protect your information.",
+            "Our application does not store or track any information about your password. If you forget your password, we will not be able to restore it or provide access to your stored data. Please ensure you choose a secure password and keep it in a safe place, as it is solely your responsibility to remember it.",
+          ]}
+        />
       </section>
 
       <Divider className="my-10" soft />
