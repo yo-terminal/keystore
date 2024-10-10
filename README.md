@@ -1,6 +1,6 @@
 # Keystore
 
-Web Site: [https://ks.terminal.mobi](https://ks.terminal.mobi)
+Web Site: [https://keystore.terminal.mobi](https://keystore.terminal.mobi)
 
 ### Secure storage for sensitive information (e.g. private keys, passwords, credit card details, etc.)
 
