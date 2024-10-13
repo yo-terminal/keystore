@@ -1,6 +1,5 @@
 import { ConnectButton } from "@mysten/dapp-kit";
-import { Text } from "../../common/components/text";
-import { Heading } from "../../common/components/heading";
+import { Text, Heading } from "@trade-project/ui-toolkit";
 
 export function ConnectWallet() {
   return (

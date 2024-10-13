@@ -1,4 +1,5 @@
 import { ConnectButton } from "@mysten/dapp-kit";
+import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { useLocation, Outlet, useParams, useNavigate } from "react-router-dom";
 import {
   Sidebar,
@@ -10,8 +11,14 @@ import {
   SidebarLabel,
   SidebarSection,
   SidebarSpacer,
-} from "../../../common/components/sidebar";
-import { SidebarLayout } from "../../../common/components/sidebar-layout";
+  SidebarLayout,
+  Dropdown,
+  DropdownButton,
+  DropdownDivider,
+  DropdownItem,
+  DropdownLabel,
+  DropdownMenu,
+} from "@trade-project/ui-toolkit";
 import {
   HomeIcon,
   AtSymbolIcon,
@@ -21,15 +28,6 @@ import {
 } from "@heroicons/react/20/solid";
 import Logo from "./Logo";
 import { useAppSelector, useBook } from "../../../app/hooks";
-import {
-  Dropdown,
-  DropdownButton,
-  DropdownDivider,
-  DropdownItem,
-  DropdownLabel,
-  DropdownMenu,
-} from "../../../common/components/dropdown";
-import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 export function Layout() {
   const navigate = useNavigate();
@@ -62,7 +60,7 @@ export function Layout() {
                 className="min-w-80 lg:min-w-64"
                 anchor="bottom start"
               >
-                 <DropdownItem href="/">
+                <DropdownItem href="/">
                   <Logo />
                   <DropdownLabel className="pl-3">Keystore</DropdownLabel>
                 </DropdownItem>

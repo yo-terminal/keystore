@@ -3,8 +3,7 @@ import { useAppDispatch, useAppSelector, useBook } from "../../app/hooks";
 import { openCreateSlotDialog } from "../dialogs/createSlotDialog/createSlotDialogSlice";
 import { setMaxItem, setSearchQuery } from "./rootSlice";
 import { search } from "../../common/utils";
-import { Input, InputGroup } from "../../common/components/input";
-import { Button } from "../../common/components/button";
+import { Input, InputGroup, Button } from "@trade-project/ui-toolkit";
 import { SlotList } from "./slotList/SlotList";
 import { Empty } from "./empty/Empty";
 

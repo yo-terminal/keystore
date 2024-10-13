@@ -1,11 +1,13 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { InputField } from "../../common/components/fields/InputField";
+import {
+  InputField,
+  Heading,
+  Divider,
+  Text,
+  Button,
+} from "@trade-project/ui-toolkit";
 import * as safekeeper from "../../app/safekeeper";
 import { useSafety } from "../../app/hooks";
-import { Heading } from "../../common/components/heading";
-import { Divider } from "../../common/components/divider";
-import { Text } from "../../common/components/text";
-import { Button } from "../../common/components/button";
 
 type FormInput = {
   password: string;
@@ -26,7 +28,12 @@ export function Decrypt() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-3xl">
-      <Heading><span className="font-light tracking-wide text-yellow-600 dark:text-yellow-500">Keystore</span> is locked</Heading>
+      <Heading>
+        <span className="font-light tracking-wide text-yellow-600 dark:text-yellow-500">
+          Keystore
+        </span>{" "}
+        is locked
+      </Heading>
       <Divider className="my-10 mt-6" soft />
 
       <section className="mt-10 grid gap-x-2 gap-y-6 sm:grid-cols-2">
@@ -51,9 +58,7 @@ export function Decrypt() {
             type="password"
             rules={{ required: true }}
           /> */}
-          <Button type="submit">
-          Unlock
-        </Button>
+          <Button type="submit">Unlock</Button>
         </div>
       </section>
 

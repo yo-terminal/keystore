@@ -1,9 +1,9 @@
 import { DateTime } from "luxon";
 // import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import classNames from "classnames";
+import { Badge } from "@trade-project/ui-toolkit";
 import { Link } from "react-router-dom";
 import { Slot } from "../../../app/types";
-import { Badge } from "../../../common/components/badge";
 
 type Props = {
   className?: string;

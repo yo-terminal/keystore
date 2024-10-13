@@ -1,11 +1,14 @@
 import { useForm, SubmitHandler } from "react-hook-form";
-import { InputField } from "../../common/components/fields/InputField";
+import {
+  InputField,
+  Spin,
+  TextareaField,
+  FieldGroup,
+  Fieldset,
+  Button,
+} from "@trade-project/ui-toolkit";
 import { UpdateSlotValues, Slot } from "../../app/types";
 import { ParentValues, ParentsField } from "./fields/ParentsField";
-import Spin from "../../common/components/Spin";
-import { TextareaField } from "../../common/components/fields/TextareaField";
-import { FieldGroup, Fieldset } from "../../common/components/fieldset";
-import { Button } from "../../common/components/button";
 
 type FormInput = {
   summary: string;

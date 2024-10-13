@@ -1,14 +1,9 @@
 import { SubmitHandler, useForm } from "react-hook-form";
-import { InputField } from "../../common/components/fields/InputField";
+import { InputField, Button, Spin, Heading, Subheading, Divider, Text } from "@trade-project/ui-toolkit";
 import { getHash, getSalt } from "../../common/utils";
 import { Transaction } from "@mysten/sui/transactions";
 import { useSafety, useSignAndExecute } from "../../app/hooks";
-import { Button } from "../../common/components/button";
-import Spin from "../../common/components/Spin";
 import * as safekeeper from "../../app/safekeeper";
-import { Heading, Subheading } from "../../common/components/heading";
-import { Divider } from "../../common/components/divider";
-import { Text } from "../../common/components/text";
 import Warning from "./Warning";
 
 type FormInput = {

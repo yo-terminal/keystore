@@ -1,4 +1,4 @@
-import { Modal } from "../../../common/components/Modal";
+import { Modal } from "@trade-project/ui-toolkit";
 import { closeUpdateSlotDialog } from "./updateSlotDialogSlice";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { UpdateSlotForm } from "./UpdateSlotForm";

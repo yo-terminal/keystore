@@ -1,8 +1,5 @@
 import { PlusIcon } from "@heroicons/react/20/solid";
-import { Button } from "../../../common/components/button";
-import { Heading } from "../../../common/components/heading";
-import { Divider } from "../../../common/components/divider";
-import { Text } from "../../../common/components/text";
+import { Button, Heading, Divider, Text } from "@trade-project/ui-toolkit";
 import { useAppDispatch } from "../../../app/hooks";
 import { openCreateSlotDialog } from "../../dialogs/createSlotDialog/createSlotDialogSlice";
 

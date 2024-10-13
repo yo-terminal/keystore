@@ -4,18 +4,18 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useAppDispatch, useBook, useSignAndExecute } from "../../app/hooks";
 import { openCreateSlotDialog } from "../dialogs/createSlotDialog/createSlotDialogSlice";
 import { openUpdateSlotDialog } from "../dialogs/updateSlotDialog/updateSlotDialogSlice";
-import { Heading } from "../../common/components/heading";
-import { Badge } from "../../common/components/badge";
-import { Button } from "../../common/components/button";
 import {
+  Heading,
+  Badge,
+  Button,
   Dropdown,
   DropdownButton,
   DropdownItem,
   DropdownMenu,
-} from "../../common/components/dropdown";
+} from "@trade-project/ui-toolkit";
 import { EllipsisVerticalIcon } from "@heroicons/react/16/solid";
-import { SubSlotList } from "./subSlotList/SubSlotList";
 import { Transaction } from "@mysten/sui/transactions";
+import { SubSlotList } from "./subSlotList/SubSlotList";
 
 export function Slot() {
   const dispatch = useAppDispatch();
@@ -185,7 +185,9 @@ export function Slot() {
         </div>
       )}
       {!slot?.content && children.length === 0 && (
-        <div className="py-16 text-sm font-semibold text-slate-500 dark:text-slate-400 text-center">No content</div>
+        <div className="py-16 text-sm font-semibold text-slate-500 dark:text-slate-400 text-center">
+          No content
+        </div>
       )}
       {children.length > 0 && (
         <div className="mt-12">
