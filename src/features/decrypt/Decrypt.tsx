@@ -2,7 +2,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import {
   InputField,
   Heading,
-  Divider,
   Text,
   Button,
 } from "@trade-project/ui-toolkit";
@@ -27,14 +26,17 @@ export function Decrypt() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-3xl">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="mx-auto max-w-3xl p-10 bg-slate-50 dark:bg-slate-950 border border-slate-950/5 dark:border-white/5 rounded-lg overflow-hidden"
+    >
       <Heading>
         <span className="font-light tracking-wide text-yellow-600 dark:text-yellow-500">
           Keystore
         </span>{" "}
         is locked
       </Heading>
-      <Divider className="my-10 mt-6" soft />
+      {/* <Divider className="my-10 mt-6" soft /> */}
 
       <section className="mt-10 grid gap-x-2 gap-y-6 sm:grid-cols-2">
         <div className="space-y-1">
