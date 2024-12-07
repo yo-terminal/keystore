@@ -68,7 +68,7 @@ export function Layout() {
                 </DropdownItem>
                 <DropdownItem href="/">
                   <LockClosedIcon />
-                  <DropdownLabel className="pl-3">Keystore</DropdownLabel>
+                  <DropdownLabel>Keystore</DropdownLabel>
                 </DropdownItem>
                 <DropdownDivider />
                 <DropdownItem href="https://terminal.mobi">
