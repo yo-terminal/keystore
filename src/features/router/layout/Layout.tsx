@@ -21,6 +21,8 @@ import {
 } from "@trade-project/ui-toolkit";
 import {
   HomeIcon,
+  CommandLineIcon,
+  LockClosedIcon,
   AtSymbolIcon,
   ArrowTurnLeftUpIcon,
   Cog6ToothIcon,
@@ -60,8 +62,12 @@ export function Layout() {
                 className="min-w-80 lg:min-w-64"
                 anchor="bottom start"
               >
+                <DropdownItem href="https://yield.terminal.mobi">
+                  <CommandLineIcon />
+                  <DropdownLabel>Terminal</DropdownLabel>
+                </DropdownItem>
                 <DropdownItem href="/">
-                  <Logo />
+                  <LockClosedIcon />
                   <DropdownLabel className="pl-3">Keystore</DropdownLabel>
                 </DropdownItem>
                 <DropdownDivider />
